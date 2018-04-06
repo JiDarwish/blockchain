@@ -23,7 +23,7 @@ export default class Table extends Component {
             <div className="row">
               <td>2017-03-29 14:12</td>
               <td>A</td>
-              <td>Warning</td>
+              <td><a class='btn btn-danger' href='#'>Warning</a></td>
               <td>Temperature has been too high</td>
               </div>
             </tr>

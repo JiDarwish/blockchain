@@ -1,0 +1,74 @@
+{
+  "data": [
+    {
+      "temp": {
+        "value": 24,
+        "average": 21
+      },
+      "pressure": {
+        "value": 26,
+        "average": 22
+      },
+      "humidity": {
+        "value": 21,
+        "average": 26
+      }
+    },
+    {
+      "temp": {
+        "value": 22,
+        "average": 21
+      },
+      "pressure": {
+        "value": 22,
+        "average": 22
+      },
+      "humidity": {
+        "value": 25,
+        "average": 26
+      }
+    },
+    {
+      "temp": {
+        "value": 28,
+        "average": 21
+      },
+      "pressure": {
+        "value": 29,
+        "average": 22
+      },
+      "humidity": {
+        "value": 30,
+        "average": 26
+      }
+    },
+    {
+      "temp": {
+        "value": 34,
+        "average": 21
+      },
+      "pressure": {
+        "value": 36,
+        "average": 22
+      },
+      "humidity": {
+        "value": 31,
+        "average": 26
+      }
+    },
+    {
+      "temp": {
+        "value": 34,
+        "average": 21
+      },
+      "pressure": {
+        "value": 32,
+        "average": 22
+      },
+      "humidity": {
+        "value": 40,
+        "average": 26
+      }
+    }
+  ]
+}

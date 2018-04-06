@@ -1,0 +1,10 @@
+.table {
+	border: 1px solid #000;
+}
+
+td, th {
+	height: 40px !important;
+	padding: 0px !important;
+	line-height: 38px;
+	padding-left: 4px !important;
+}

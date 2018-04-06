@@ -5,10 +5,10 @@ export default class Table extends Component {
   render() {
     return (
       <div>
-          <table>
+          <table className="table table-striped table-hover">
             <thead>
               <tr>
-                <th>Date and Time</th>
+                <th>Timestamp</th>
                 <th>Company</th>
                 <th>Status</th>
                 <th>Alert</th>
@@ -18,7 +18,7 @@ export default class Table extends Component {
               <tr>
                 <td>2017-03-29 14:12</td>
                 <td>A</td>
-                <td><a className='btn btn-danger' href='#'>Warning</a></td>
+                <td><button type="button" class="btn btn-danger">Warning</button></td>
                 <td>Temperature has been too high</td>
               </tr>
               <tr>

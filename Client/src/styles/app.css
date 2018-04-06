@@ -5,6 +5,7 @@ box-sizing: border-box;
 }
 
 .flex-container{
+	margin-top: 80px;
 	 display: flex;
 	 flex-wrap: nowrap;
 	 flex-direction: row;
@@ -16,7 +17,11 @@ body{
 }
 
 table{
-	width: 450px;
+	text-align: left;
+	width: 750px;
+	height: 230px;
+	border: 1px solid black;
+	border-collapse: collapse;
 	align-items: center;
 	background-color: #EBEBEB;
 	font-family:'Open Sans', sans-serif;
@@ -24,5 +29,31 @@ table{
 	font-weight: 500;
 	font-size: 15px;
 	line-height: 1.9em;
+}
+thead{
+	height: 100%;
+	font-style: bold;
+	border-bottom: 1px solid black;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #cccccc;
+    color: black bold;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+
+tr:hover {background-color: #ddd;}
+
+.sparklineContainer {
+  position: relative;
+  width: 400px;
+  border: 0.5px solid grey;
+}
+
+.maxLine {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border: 2px solid red;
 }
 

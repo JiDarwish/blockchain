@@ -6,7 +6,8 @@
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-google-maps": "^9.4.5",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "react-sparklines": "^1.7.0"
   },
   "scripts": {
     "start": "react-scripts start",

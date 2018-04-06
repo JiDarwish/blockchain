@@ -1,0 +1,12 @@
+.sparklineContainer {
+  position: relative;
+  width: 400px;
+  border: 0.5px solid grey;
+}
+
+.maxLine {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border: 2px solid red;
+}

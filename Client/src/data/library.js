@@ -9,7 +9,7 @@ var trainStation_B_Address = '0x5ab612a4c920610f016c6281bbb577ce0a729b2c'
 var trainStation_C_Address = '0x50a1cec928409a5b6673d86499a42fe80142fae7'
 
 const assetABI = {
-  "address": "0x63e9afc67295ab4180ae77ef0554e62dab707f3b",
+  "address": "0x72363bd8dc4bb0b64626746ccbb54f2ad5eb37a1",
   "abi": [
     {
       "inputs": [],
@@ -143,42 +143,6 @@ const assetABI = {
           "type": "address"
         },
         {
-          "name": "_timestamp",
-          "type": "int256"
-        }
-      ],
-      "name": "addTrainStation",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "_trainAddress",
-          "type": "address"
-        },
-        {
-          "name": "_timestamp",
-          "type": "int256"
-        }
-      ],
-      "name": "addTrain",
-      "outputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "constant": false,
-      "inputs": [
-        {
-          "name": "_trainStationAddress",
-          "type": "address"
-        },
-        {
           "name": "_pressure",
           "type": "int256"
         },
@@ -238,25 +202,6 @@ const assetABI = {
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
-    },
-    {
-      "constant": true,
-      "inputs": [
-        {
-          "name": "_address",
-          "type": "address"
-        }
-      ],
-      "name": "getRole",
-      "outputs": [
-        {
-          "name": "",
-          "type": "uint256"
-        }
-      ],
-      "payable": false,
-      "stateMutability": "view",
-      "type": "function"
     }
   ]
 }
@@ -281,12 +226,15 @@ module.exports = {
 
 
 function getTrainStationDataHistory() {
-  assetContract.trainStationDataRegistered({}, {
-    fromBlock: 0,
-    toBlock: 'latest'
-  }).get(function (error, events) {
-    console.log(events[0].args)
-  });
+  return new Promise((resolve, reject) => {
+    assetContract.trainStationDataRegistered({}, {
+      fromBlock: 0,
+      toBlock: 'latest'
+    }).get(function (error, events) {
+      if (error) reject(error);
+      resolve(events);
+    });
+  })
 }
 
 
@@ -296,11 +244,14 @@ function getTrainDataHistory() {
       fromBlock: 0,
       toBlock: 'latest'
     }).get(function (error, events) {
+
+      if (error) reject(error);
       resolve(events);
-      console.log(events)
     });
   })
 }
+
+
 
 module.exports = {
   getTrainDataHistory,

@@ -4,61 +4,81 @@
       "timestamp": "2017-03-29 15:12",
       "temperature": 25,
       "pressure": 21,
-      "humidity": 32
+      "humidity": 32,
+      "isTrainArrived": 0,
+      "isCargoHere": 0
     },
     {
       "timestamp": "2017-03-29 15:13",
       "temperature": 22,
       "pressure": 21,
-      "humidity": 32
+      "humidity": 32,
+      "isTrainArrived": 0,
+      "isCargoHere": 0
     },
     {
       "timestamp": "2017-03-29 15:14",
       "temperature": 22,
       "pressure": 21,
-      "humidity": 32
+      "humidity": 32,
+      "isTrainArrived": 0,
+      "isCargoHere": 0
     },
     {
       "timestamp": "2017-03-29 15:15",
       "temperature": 22,
       "pressure": 21,
-      "humidity": 32
+      "humidity": 32,
+      "isTrainArrived": 0,
+      "isCargoHere": 0
     },
     {
       "timestamp": "2017-03-29 15:16",
       "temperature": 22,
       "pressure": 21,
-      "humidity": 32
+      "humidity": 32,
+      "isTrainArrived": 0,
+      "isCargoHere": 0
     },
     {
       "timestamp": "2017-03-29 15:17",
       "temperature": 22,
       "pressure": 21,
-      "humidity": 32
+      "humidity": 32,
+      "isTrainArrived": 0,
+      "isCargoHere": 0
     },
     {
       "timestamp": "2017-03-29 15:18",
       "temperature": 22,
       "pressure": 21,
-      "humidity": 32
+      "humidity": 32,
+      "isTrainArrived": 0,
+      "isCargoHere": 0
     },
     {
       "timestamp": "2017-03-29 15:19",
       "temperature": 22,
       "pressure": 21,
-      "humidity": 32
+      "humidity": 32,
+      "isTrainArrived": 0,
+      "isCargoHere": 0
     },
     {
       "timestamp": "2017-03-29 15:22",
       "temperature": 22,
       "pressure": 21,
-      "humidity": 32
+      "humidity": 32,
+      "isTrainArrived": 0,
+      "isCargoHere": 0
     },
     {
       "timestamp": "2017-03-29 15:22",
       "temperature": 22,
       "pressure": 21,
-      "humidity": 32
+      "humidity": 32,
+      "isTrainArrived": 0,
+      "isCargoHere": 0
     }
   ]
 }

@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import SparkLineChart from './SparklineChart';
+
+import '../../styles/sparklines.css';
 
 export default class Sparklines extends Component {
   getSparklinePoints = () => {
@@ -20,13 +22,15 @@ export default class Sparklines extends Component {
 
   render() {
     const { temperature, pressure, humidity } = this.getSparklinePoints();
-    console.log(temperature, pressure, humidity);
     return (
-      <div className="Sparklines">
-        <SparkLineChart data={temperature} type="Temperature" />
-        <SparkLineChart data={pressure} type="Pressure" />
-        <SparkLineChart data={humidity} type="Humidity" />
-      </div>
+      <Fragment>
+        <h2 className="headerTrain">Train's Data</h2>
+        <div className="Sparklines">
+          <SparkLineChart data={temperature} type="Temperature" />
+          <SparkLineChart data={pressure} type="Pressure" />
+          <SparkLineChart data={humidity} type="Humidity" />
+        </div>
+      </Fragment>
     )
   }
 }

@@ -1,15 +1,20 @@
-import React, { Component } from 'react';
-import BarChart from 'react-bar-chart';
+import React, { Component, Fragment } from 'react'
+import { BarChart } from 'react-easy-chart';
+import OneBarChart from './OneBarChart';
 
-const margin = { top: 20, right: 20, bottom: 30, left: 40 };
+import '../../styles/barCharts.css'
 
 export default class BarCharts extends Component {
   render() {
-    const data = [{ text: 'temp', value: 20 }, { text: 'humid', value: 59 }];
     return (
-      <div>
-        <BarChart margin={margin} data={data} width={300} height={500} />
-      </div>
+      <Fragment>
+        <h2 className="headerCompany">Company's Data</h2>
+        <div className="CompanyChartContainer">
+          <OneBarChart companyName="A" />
+          <OneBarChart companyName="B" />
+          <OneBarChart companyName="C" />
+        </div>
+      </Fragment>
     )
   }
 }

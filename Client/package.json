@@ -5,11 +5,12 @@
   "dependencies": {
     "bootstrap": "^4.0.0",
     "react": "^16.3.1",
-    "react-bar-chart": "^0.1.2",
     "react-dom": "^16.3.1",
+    "react-easy-chart": "^1.0.0",
     "react-google-maps": "^9.4.5",
     "react-scripts": "1.1.4",
-    "react-sparklines": "^1.7.0"
+    "react-sparklines": "^1.7.0",
+    "web3": "0.20.6"
   },
   "scripts": {
     "start": "react-scripts start",

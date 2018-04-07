@@ -1,0 +1,52 @@
+
+
+.CompanyChartContainer {
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.typeBar > * {
+  width: 100px;
+  text-align: center;
+  display: inline-block;
+}
+
+.singleChartContainer {
+  text-align: center;
+}
+
+.singleChartContainer > span {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  
+}
+
+.barsContainer {
+  background: #dee2e6;
+  position: relative;
+}
+
+.headerCompany {
+  margin-top: 80px;  
+  text-align: center;
+  width: 100%;
+  background: lightblue;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.dataValues {
+  position: absolute;
+  top: 0;
+}
+
+.dataValues > * {
+  width: 100px;
+  text-align: center;
+  display: inline-block;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}

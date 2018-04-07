@@ -1,10 +1,11 @@
 import React, { Component, Fragment } from 'react'
 import { BarChart } from 'react-easy-chart';
+import image from '../../images/loader.gif';
 
 export default class OneBarChart extends Component {
   render() {
     if (!this.props.data) {
-      return null;
+      return <img src={image} alt="Loading" />
     }
     const { A, B, C } = this.props.data;
 

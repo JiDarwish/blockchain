@@ -4,7 +4,6 @@ import { LineChart } from 'react-easy-chart';
 
 export default class SparklineChart extends Component {
   render() {
-    console.log(this.props.data);
     return (
       <div style={{ textAlign: 'center' }}>
         <div className="sparklineContainer">

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import '../styles/table.css'
 
+import image from '../images/loader.gif'
+
 export default class Table extends Component {
   renderTableRows = () => {
     return this.props.data.map(item => (
@@ -14,7 +16,7 @@ export default class Table extends Component {
   }
   render() {
     if (!this.props.data || !this.props.A || !this.props.B || !this.props.C) {
-      return null;
+      return <img src={image} alt="loading" style={{ marginLeft: '120px' }} />
     }
     console.error('Naaaaaa', this.props.data)
     const rows = this.renderTableRows();

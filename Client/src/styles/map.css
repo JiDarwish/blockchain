@@ -1,0 +1,35 @@
+.train-map-container {
+    position: relative;
+}
+
+.pin {
+    position: absolute;
+    width: 33px;
+    height: 49px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.pin-active {
+    background-image: url("../images/pin-active.png");
+}
+
+.pin-inactive {
+    background-image: url("../images/pin-inactive.png");
+}
+
+.pin-a {
+    top: 15%;
+    left: 18%;
+}
+
+.pin-b {
+    right: 19%;
+    top: 15%;
+
+}
+
+.pin-c {
+    bottom: 11%;
+    right: 46%;
+}

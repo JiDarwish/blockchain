@@ -7,7 +7,7 @@ export default class SparklineChart extends Component {
   render() {
     return (
       <div className="sparklineContainer">
-        <Sparklines className="sparkline" height={100} data={this.props.data} min={20} max={40}>
+        <Sparklines className="sparkline" height={100} data={this.props.data} >
           <SparklinesLine color="blue" />
         </Sparklines>
         <span className="maxLine" style={{ top: '20px' }} />

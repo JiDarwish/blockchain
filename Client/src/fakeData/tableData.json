@@ -1,0 +1,40 @@
+{
+  "tableData": [
+    {
+      "timestamp": "2017-03-29 14:12",
+      "company": "A",
+      "status": 0,
+      "alert": "Train arrived on time"
+    },
+    {
+      "timestamp": "2017-03-29 14:13",
+      "company": "B",
+      "status": 2,
+      "alert": "Heat is too high"
+    },
+    {
+      "timestamp": "2017-03-29 14:14",
+      "company": "B",
+      "status": 1,
+      "alert": "Train was too late"
+    },
+    {
+      "timestamp": "2017-03-29 14:15",
+      "company": "C",
+      "status": 2,
+      "alert": "Temprature was too high"
+    },
+    {
+      "timestamp": "2017-03-29 14:15",
+      "company": "B",
+      "status": 1,
+      "alert": "Train was too late"
+    },
+    {
+      "timestamp": "2017-03-29 14:15",
+      "company": "B",
+      "status": 1,
+      "alert": "Train was too late"
+    }
+  ]
+}

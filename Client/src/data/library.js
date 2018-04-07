@@ -228,7 +228,7 @@ module.exports = {
 function getTrainStationDataHistory() {
   return new Promise((resolve, reject) => {
     assetContract.trainStationDataRegistered({}, {
-      fromBlock: 0,
+      fromBlock: web3.eth.blockNumber - 170,
       toBlock: 'latest'
     }).get(function (error, events) {
       if (error) reject(error);
@@ -255,5 +255,5 @@ function getTrainDataHistory() {
 
 module.exports = {
   getTrainDataHistory,
-  getTrainStationDataHistory
+  getTrainStationDataHistory,
 }

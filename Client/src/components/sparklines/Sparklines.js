@@ -9,13 +9,14 @@ export default class Sparklines extends Component {
     const pressure = [];
     const humidity = [];
     if (this.props.data) {
+      let i = 1;
       this.props.data.forEach(item => {
-        temperature.push(item.temperature);
-        pressure.push(item.pressure);
-        humidity.push(item.humidity);
+        temperature.push({ x: i, y: item.temperature });
+        pressure.push({ x: i, y: item.pressure });
+        humidity.push({ x: i, y: item.humidity });
+        i++;
       })
     }
-
     return {
       temperature,
       pressure,

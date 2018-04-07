@@ -3,29 +3,34 @@ import { BarChart } from 'react-easy-chart';
 
 export default class OneBarChart extends Component {
   render() {
+    if (!this.props.data) {
+      return null;
+    }
+    const { A, B, C } = this.props.data;
+
     return (
       <div className="singleChartContainer">
-        <span>Company {this.props.companyName}</span>
+        <span>{this.props.dataType}</span>
         <div className="barsContainer" >
           <div>
             <BarChart
               data={[
-                { x: 'A', y: 20 },
-                { x: 'B', y: 30 },
-                { x: 'C', y: 40 }
+                { x: 'A', y: A },
+                { x: 'B', y: B },
+                { x: 'C', y: C }
               ]}
               width={300}
             />
           </div>
           <div className="dataValues">
-            <span>25 C</span>
-            <span>100 Pa</span>
-            <span>50%</span>
+            <span>{A} {this.props.unit}</span>
+            <span>{B} {this.props.unit}</span>
+            <span>{C} {this.props.unit}</span>
           </div>
           <div className="typeBar">
-            <span>temp</span>
-            <span>pressure</span>
-            <span>humidity</span>
+            <span>A</span>
+            <span>B</span>
+            <span>C</span>
           </div>
         </div>
       </div>

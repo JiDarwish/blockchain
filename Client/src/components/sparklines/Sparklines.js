@@ -2,12 +2,6 @@ import React, { Component } from 'react'
 import SparkLineChart from './SparklineChart';
 
 export default class Sparklines extends Component {
-  state = {
-    temprature: [],
-    pressure: [],
-    humidity: []
-  }
-
   getSparklinePoints = () => {
     const temperature = [];
     const pressure = [];
@@ -29,11 +23,9 @@ export default class Sparklines extends Component {
     console.log(temperature, pressure, humidity);
     return (
       <div className="Sparklines">
-        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-          <SparkLineChart data={temperature} />
-          <SparkLineChart data={pressure} />
-          <SparkLineChart data={humidity} />
-        </div>
+        <SparkLineChart data={temperature} type="Temperature" />
+        <SparkLineChart data={pressure} type="Pressure" />
+        <SparkLineChart data={humidity} type="Humidity" />
       </div>
     )
   }

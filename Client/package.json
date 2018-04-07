@@ -5,6 +5,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0",
     "react": "^16.3.1",
+    "react-bar-chart": "^0.1.2",
     "react-dom": "^16.3.1",
     "react-google-maps": "^9.4.5",
     "react-scripts": "1.1.4",

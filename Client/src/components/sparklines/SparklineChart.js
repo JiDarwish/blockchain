@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-sparklines'
 
-import '../../styles/sparkline.css'
+import '../../styles/sparklines.css'
 
 export default class SparklineChart extends Component {
   render() {
@@ -10,7 +10,7 @@ export default class SparklineChart extends Component {
         <Sparklines className="sparkline" height={100} data={this.props.data} >
           <SparklinesLine color="blue" />
         </Sparklines>
-        <span className="maxLine" style={{ top: '20px' }} />
+        <span>{this.props.type}</span>
       </div>
     )
   }

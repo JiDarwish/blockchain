@@ -1,0 +1,10 @@
+
+.sparklineContainer {
+  width: 300px;
+  text-align: center;
+}
+
+.Sparklines {
+  display: flex;
+  justify-content: space-between;
+}

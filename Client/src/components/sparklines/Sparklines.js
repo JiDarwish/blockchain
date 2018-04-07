@@ -30,9 +30,9 @@ export default class Sparklines extends Component {
       <Fragment>
         <h2 className="headerTrain">Train's Data</h2>
         <div className="Sparklines">
-          <SparkLineChart data={temperature} type="Temperature" />
-          <SparkLineChart data={pressure} type="Pressure" />
-          <SparkLineChart data={humidity} type="Humidity" />
+          <SparkLineChart data={temperature} unit="C" type="Temperature" />
+          <SparkLineChart data={pressure} unit="Pa" type="Pressure" />
+          <SparkLineChart data={humidity} unit="%" type="Humidity" />
         </div>
       </Fragment>
     )

@@ -22,13 +22,17 @@ class App extends Component {
   state = {
     trainData: [],
     stationData: [],
-    lastData: null
+    lastData: null,
+    last5: null
   }
 
   componentDidMount = () => {
     this.trainData = setInterval(() => {
       getTrainStationDataHistory().then(res => {
         const data = util.getArrayData(res)
+        const last5 = util.getLast5Data(res);
+        this.setState({ last5 });
+        console.log(res);
         const { pressures, temperatures, humidities } = util.getLastDataForCompanies(A, B, C, res);
         this.setState({
           lastData: {
@@ -60,7 +64,7 @@ class App extends Component {
               />
             </div>
             <div id="tableContainer">
-              <Table />
+              <Table data={this.state.last5} A={A} B={B} C={C} />
             </div>
           </div>
           <Sparklines data={this.state.trainData} />

@@ -1,7 +1,7 @@
 export function getArrayData(data) {
   return data.splice(data.length - 10, data.length - 1).map(measurment => {
     return {
-      temperature: measurment.args.temperature.c[0],
+      temperature: measurment.args.temperature.c[0] - 34,
       timestamp: measurment.args.timestamp.c[0],
       pressure: measurment.args.pressure.c[0],
       humidity: measurment.args.humidity.c[0]
@@ -34,9 +34,9 @@ export function getLastDataForCompanies(A, B, C, data) {
 
   return {
     temperatures: {
-      A: dataA.temperature.c[0],
-      B: dataB.temperature.c[0],
-      C: dataC.temperature.c[0]
+      A: dataA.temperature.c[0] - 36,
+      B: dataB.temperature.c[0] - 36,
+      C: dataC.temperature.c[0] - 36
     },
     pressures: {
       A: dataA.pressure.c[0],
@@ -49,4 +49,7 @@ export function getLastDataForCompanies(A, B, C, data) {
       C: dataC.humidity.c[0],
     }
   }
+}
+export function getLast5Data(data) {
+  return data.splice(data.length - 5, data.length - 1);
 }

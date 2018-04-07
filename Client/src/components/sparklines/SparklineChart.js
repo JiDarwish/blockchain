@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react'
-import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-sparklines'
 import { LineChart } from 'react-easy-chart';
 
 
@@ -20,7 +19,7 @@ export default class SparklineChart extends Component {
           />
 
         </div>
-        <span>{this.props.type}</span>
+        <span>{this.props.type} {this.props.unit}</span>
       </div>
     )
   }

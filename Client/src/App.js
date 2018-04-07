@@ -10,6 +10,7 @@ import { Model } from './components/model/model';
 import * as util from './util';
 import { startSimulation } from './components/simulation/simulation';
 import { getTrainDataHistory, getTrainStationDataHistory } from './data/library';
+import {InputTrainController} from './components/inputTrainController/inputTrainController';
 
 
 const A = '0x45f2eb5ca5123dd7dfc708f7181f4fbd73fd3036';
@@ -22,11 +23,20 @@ class App extends Component {
     trainData: [],
     stationData: [],
     lastData: null,
-    last5: null
+    last5: null,
+    pinAState: 'inactive',
+    pinBState: 'inactive',
+    pinCState: 'inactive',
+    trackState: 'none'
   }
 
+  inputTrainController;
+
   componentDidMount = () => {
+    this.inputTrainController = new InputTrainController(this);
+
     this.trainData = setInterval(() => {
+      
       getTrainDataHistory().then(res => {
         const data = util.getArrayData(res)
         this.setState({ trainData: data });
@@ -53,6 +63,7 @@ class App extends Component {
 
 
   render() {
+    const {pinAState, pinBState, pinCState} = this.state;
     return (
       <div className="root">
         <Header />
@@ -60,10 +71,10 @@ class App extends Component {
           <div className="topContainer">
             <div id="mapContainer">
               <Map
-                pinAState={'active'}
-                pinBState={'inactive'}
-                pinCState={'inactive'}
-                trackState="CA" //[AB | BC | CA | none]
+                pinAState={pinAState}
+                pinBState={pinBState}
+                pinCState={pinCState}
+                trackState={this.state.trackState} //[AB | BC | CA | none]
               />
             </div>
             <div id="tableContainer">

@@ -5,20 +5,32 @@ import image from '../images/loader.gif'
 
 export default class Table extends Component {
   renderTableRows = () => {
-    return this.props.data.map(item => (
-      <tr key={item.args.timestamp.c[0]}>
-        <td>{item.args.timestamp.c[0]}</td>
-        <td>{item.args.carrierAddress === this.props.A ? 'A' : item.args.carrierAddress === this.props.B ? 'B' : 'C'}</td>
-        <td>a</td>
-        <td>a</td>
-      </tr>
-    ))
+    console.log(this.props.data)
+    return this.props.data.map(item => {
+      console.log(item);
+      let state = 'Critical Alert';
+      let color = 'red';
+      if (item.temperature < 3.0) {
+        state = "Warning"
+        color = "orange"
+      }
+
+      if (item.temperature < 0.0) {
+        state = "Good"
+        color = "green"
+      }
+      return (
+        <tr key={item.timestamp}>
+          <td>{new Date(item.timestamp).toLocaleTimeString()}</td>
+          <td style={{ color: color }}>{state}</td>
+        </tr>
+      )
+    })
   }
   render() {
     if (!this.props.data || !this.props.A || !this.props.B || !this.props.C) {
       return <img src={image} alt="loading" style={{ marginLeft: '120px' }} />
     }
-    console.error('Naaaaaa', this.props.data)
     const rows = this.renderTableRows();
     return (
       <div className="table-container">
@@ -26,9 +38,7 @@ export default class Table extends Component {
           <thead>
             <tr>
               <th>Timestamp</th>
-              <th>Company</th>
               <th>Status</th>
-              <th>Alert</th>
             </tr>
           </thead>
           <tbody>

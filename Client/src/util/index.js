@@ -1,13 +1,21 @@
 export function getArrayData(data) {
-  return data.splice(data.length - 10, data.length - 1).map(measurment => {
+  return data.splice(data.length - 40, data.length - 1).map(measurment => {
     return {
-      temperature: measurment.args.temperature.c[0] - 34,
+      temperature: measurment.args.temperature.c[0] - 20,
       timestamp: measurment.args.timestamp.c[0],
       pressure: measurment.args.pressure.c[0],
       humidity: measurment.args.humidity.c[0]
     }
   })
 }
+
+// export function addStationsData(stations, trains) {
+//   for (let i = 0; i < trains.length; i++) {
+//     trains[i].pressure = stations[i].pressure;
+//     trains[i].humidity = stations[i].;
+//     trains[i].pressure = stations[i].pressure;
+//   }
+// }
 
 export function getLastDataForCompanies(A, B, C, data) {
   let dataA;
@@ -51,5 +59,5 @@ export function getLastDataForCompanies(A, B, C, data) {
   }
 }
 export function getLast5Data(data) {
-  return data.splice(data.length - 5, data.length - 1);
+  return data.splice(data.length - 5, data.length - 1)
 }

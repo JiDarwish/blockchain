@@ -8,7 +8,7 @@ export default class Header extends Component {
     return (
       <nav className="navbar navbar-expand-lg blockchain-navbar">
         <div className="container">
-          <img src={imgUrl} style={{ filter: "invert(100%)" }} />
+          <img src={imgUrl} alt="logo" style={{ filter: "invert(100%)" }} />
           <h1 className="pageTitle">TrainOps - Supply chain monitoring</h1>
         </div>
       </nav>

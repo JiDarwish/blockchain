@@ -1,3 +1,8 @@
-.our-color {
-	background-color: #fff;
+.blockchain-navbar {
+	height: 50px !important;
+	background-color: #087E8B;
+}
+
+a, a:visited, a:active {
+	color: #FFF !important;
 }

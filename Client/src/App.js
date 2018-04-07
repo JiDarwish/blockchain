@@ -30,7 +30,7 @@ class App extends Component {
               isMarkerShown
             />
             </div>
-            <div class="col-8">
+            <div className="col-8">
               <Table />
             </div>
           </div>

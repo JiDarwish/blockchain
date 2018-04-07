@@ -11,6 +11,12 @@ html {
 	height: 100%;
 }
 
+.app-container {
+	padding-top: 20px;
+	height: calc(100% - 50px);
+	background-color: #FCFAFA;
+}
+
 /*
 .flex-container{
 	margin-top: 80px;

@@ -18,7 +18,7 @@ export default class Table extends Component {
               <tr>
                 <td>2017-03-29 14:12</td>
                 <td>A</td>
-                <td><button type="button" class="btn btn-danger">Warning</button></td>
+                <td><button type="button" className="btn btn-danger">Warning</button></td>
                 <td>Temperature has been too high</td>
               </tr>
               <tr>

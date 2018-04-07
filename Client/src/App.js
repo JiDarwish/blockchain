@@ -6,14 +6,38 @@ import './styles/app.css'
 import Sparklines from './components/sparklines/Sparklines';
 import Header from './components/Header';
 import BarCharts from './components/barCharts/BarCharts';
-import { data as trainData } from './fakeData/sparkline';
+import { data as trainData } from './fakeData/sparkline';// SHould go away
+import * as util from './util';
 
 import { getTrainDataHistory, getTrainStationDataHistory } from './data/library';
-getTrainDataHistory().then(res => console.log(res));
 
-const MAX_TEMP = 30;
+getTrainStationDataHistory().then(res => console.error('train station', res));
+
+
 
 class App extends Component {
+  state = {
+    trainData: [],
+    stationData: []
+  }
+
+
+  componentDidMount = () => {
+    this.trainData = setInterval(() => {
+      getTrainDataHistory().then(res => {
+        const data = util.getArrayData(res)
+        this.setState({ trainData: data });
+      })
+
+    }, 1000);
+    getTrainStationDataHistory().then(res => {
+      const data = util.getArrayData(res)
+      console.error(data);
+    })
+  }
+
+
+
   render() {
     return (
       <div className="root">
@@ -32,7 +56,7 @@ class App extends Component {
               <Table />
             </div>
           </div>
-          <Sparklines data={trainData} />
+          <Sparklines data={this.state.trainData} />
           <BarCharts />
         </div>
       </div>

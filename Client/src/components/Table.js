@@ -4,7 +4,7 @@ import '../styles/table.css'
 export default class Table extends Component {
   render() {
     return (
-      <div>
+      <div className="table-container">
         <table className="table table-striped table-hover">
           <thead>
             <tr>

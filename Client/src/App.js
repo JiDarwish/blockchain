@@ -25,6 +25,7 @@ class App extends Component {
                 pinAState="active"
                 pinBState="inactive"
                 pinCState="inactive"
+                trackState="CA" //[AB | BC | CA | none]
               />
             </div>
             <div id="tableContainer">

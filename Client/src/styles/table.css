@@ -4,3 +4,7 @@ td, th {
   line-height: 30px;
   padding-left: 4px !important;
 }
+
+.table-container {
+  border: 2px solid #087E8B;
+}

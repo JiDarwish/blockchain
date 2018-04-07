@@ -8,9 +8,11 @@
   margin-top: 80px;
   text-align: center;
   width: 100%;
-  background: lightblue;
+  background: #087E8B;
+  color: #FFF;
   padding: 10px 0;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 

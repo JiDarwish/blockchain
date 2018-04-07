@@ -1,8 +1,11 @@
 .blockchain-navbar {
-	height: 50px !important;
 	background-color: #087E8B;
+	text-align: center;
 }
 
-a, a:visited, a:active {
-	color: #FFF !important;
+
+.pageTitle {
+	color: #fff;
+	min-width: 100px;
+	margin: 0 auto;
 }

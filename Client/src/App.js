@@ -6,11 +6,12 @@ import './styles/app.css'
 import Sparklines from './components/sparklines/Sparklines';
 import Header from './components/Header';
 import BarCharts from './components/barCharts/BarCharts';
-
 import { data as trainData } from './fakeData/sparkline';
 
-const MAX_TEMP = 30;
+import { getTrainDataHistory, getTrainStationDataHistory } from './data/library';
+getTrainDataHistory().then(res => console.log(res));
 
+const MAX_TEMP = 30;
 
 class App extends Component {
   render() {

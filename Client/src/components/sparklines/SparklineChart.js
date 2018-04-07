@@ -10,6 +10,10 @@ export default class SparklineChart extends Component {
       <div style={{ textAlign: 'center' }}>
         <div className="sparklineContainer">
           <LineChart
+            axes
+            width={300}
+            height={200}
+            interpolate={'cardinal'}
             data={[
               this.props.data
             ]}

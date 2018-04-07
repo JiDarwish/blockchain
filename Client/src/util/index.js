@@ -1,5 +1,5 @@
 export function getArrayData(data) {
-  return data.splice(data.length - 50, data.length - 1).map(measurment => {
+  return data.splice(data.length - 10, data.length - 1).map(measurment => {
     return {
       temperature: measurment.args.temperature.c[0],
       timestamp: measurment.args.timestamp.c[0],

@@ -6,9 +6,9 @@ import './styles/app.css'
 import Sparklines from './components/sparklines/Sparklines';
 import Header from './components/Header';
 import BarCharts from './components/barCharts/BarCharts';
-import { data as trainData } from './fakeData/sparkline';// SHould go away
+import { Model } from './components/model/model';
 import * as util from './util';
-
+import { startSimulation } from './components/simulation/simulation';
 import { getTrainDataHistory, getTrainStationDataHistory } from './data/library';
 
 
@@ -24,7 +24,6 @@ class App extends Component {
     stationData: [],
     lastData: null
   }
-
 
   componentDidMount = () => {
     this.trainData = setInterval(() => {
@@ -54,9 +53,9 @@ class App extends Component {
           <div className="topContainer">
             <div id="mapContainer">
               <Map
-                pinAState="active"
-                pinBState="inactive"
-                pinCState="inactive"
+                pinAState={'active'}
+                pinBState={'inactive'}
+                pinCState={'inactive'}
                 trackState="CA" //[AB | BC | CA | none]
               />
             </div>

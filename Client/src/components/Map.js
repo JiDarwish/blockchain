@@ -4,7 +4,6 @@ import trainTracksImgAB from '../images/train-tracks-ab.png'
 import trainTracksImgBC from '../images/train-tracks-bc.png'
 import trainTracksImgCA from '../images/train-tracks-ca.png'
 import '../styles/map.css';
-//import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 
 function getTrainTracksImg(state) {
   switch(state) {

@@ -2,18 +2,37 @@ import React, { Component } from 'react'
 import SparkLineChart from './SparklineChart';
 
 export default class Sparklines extends Component {
-  renderSparklines = () => {
-    return this.props.data.map(setData => (
-      <div className="col-4">
-        <SparkLineChart key={setData} data={setData} />
-      </div>
-    ))
+  state = {
+    temprature: [],
+    pressure: [],
+    humidity: []
   }
+
+  getSparklinePoints = () => {
+    const temperature = [];
+    const pressure = [];
+    const humidity = [];
+    this.props.data.forEach(item => {
+      temperature.push(item.temperature);
+      pressure.push(item.pressure);
+      humidity.push(item.humidity);
+    })
+    return {
+      temperature,
+      pressure,
+      humidity
+    }
+  }
+
   render() {
+    const { temperature, pressure, humidity } = this.getSparklinePoints();
+    console.log(temperature, pressure, humidity);
     return (
       <div className="Sparklines">
-        <div className="row">
-          {this.renderSparklines()}
+        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+          <SparkLineChart data={temperature} />
+          <SparkLineChart data={pressure} />
+          <SparkLineChart data={humidity} />
         </div>
       </div>
     )

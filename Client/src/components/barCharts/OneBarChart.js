@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { BarChart } from 'react-easy-chart';
 import image from '../../images/loader.gif';
 
@@ -16,7 +16,7 @@ export default class OneBarChart extends Component {
           <div>
             <BarChart
               data={[
-                { x: 'A', y: A, color:  A > 0 ? 'red' : A > 3 ? 'orange' : '#69c956'  },
+                { x: 'A', y: A, color: A > 0 ? 'red' : A > 3 ? 'orange' : '#69c956' },
                 { x: 'B', y: B },
                 { x: 'C', y: C }
               ]}

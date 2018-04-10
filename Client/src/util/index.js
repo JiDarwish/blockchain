@@ -34,6 +34,7 @@ export function getLastDataForCompanies(A, B, C, data) {
       case C:
         dataC = data[i].args;
         break;
+      default:
     }
     if (dataA && dataB && dataC) {
       break;

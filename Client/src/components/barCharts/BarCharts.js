@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react'
-import { BarChart } from 'react-easy-chart';
 import OneBarChart from './OneBarChart';
 
 import '../../styles/barCharts.css'

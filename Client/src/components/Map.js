@@ -6,7 +6,7 @@ import trainTracksImgCA from '../images/train-tracks-ca.png'
 import '../styles/map.css';
 
 function getTrainTracksImg(state) {
-  switch(state) {
+  switch (state) {
     case "none":
       return trainTracksImgNone;
     case "AB":
@@ -14,7 +14,8 @@ function getTrainTracksImg(state) {
     case "BC":
       return trainTracksImgBC;
     case "CA":
-      return trainTracksImgCA; 
+      return trainTracksImgCA;
+    default:
   }
 }
 
@@ -22,7 +23,7 @@ export default class Map extends Component {
   render() {
     return (
       <div className="train-map-container">
-        <img src={getTrainTracksImg(this.props.trackState)} />
+        <img src={getTrainTracksImg(this.props.trackState)} alt="train tracks" />
         <div className={"pin pin-a pin-" + this.props.pinAState}>
           A
         </div>

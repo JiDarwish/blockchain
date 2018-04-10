@@ -4,9 +4,11 @@ const NODE = 'http://192.168.0.102:8545'
 const admin_account = '0x1685bdd771b2e66828d7c28afdffd1e7ddf18810'
 const admin_password = "abc"
 
-var trainStation_A_Address = '0x45f2eb5ca5123dd7dfc708f7181f4fbd73fd3036'
-var trainStation_B_Address = '0x5ab612a4c920610f016c6281bbb577ce0a729b2c'
-var trainStation_C_Address = '0x50a1cec928409a5b6673d86499a42fe80142fae7'
+//////////////////////////////////////////////////////////// These were defined but never used ?
+
+// var trainStation_A_Address = '0x45f2eb5ca5123dd7dfc708f7181f4fbd73fd3036'
+// var trainStation_B_Address = '0x5ab612a4c920610f016c6281bbb577ce0a729b2c'
+// var trainStation_C_Address = '0x50a1cec928409a5b6673d86499a42fe80142fae7'
 
 const assetABI = {
   "address": "0x72363bd8dc4bb0b64626746ccbb54f2ad5eb37a1",

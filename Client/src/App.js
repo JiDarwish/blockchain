@@ -6,11 +6,9 @@ import './styles/app.css'
 import Sparklines from './components/sparklines/Sparklines';
 import Header from './components/Header';
 import BarCharts from './components/barCharts/BarCharts';
-import { Model } from './components/model/model';
 import * as util from './util';
-import { startSimulation } from './components/simulation/simulation';
 import { getTrainDataHistory, getTrainStationDataHistory } from './data/library';
-import {InputTrainController} from './components/inputTrainController/inputTrainController';
+import { InputTrainController } from './components/inputTrainController/inputTrainController';
 
 
 const A = '0x45f2eb5ca5123dd7dfc708f7181f4fbd73fd3036';
@@ -36,7 +34,7 @@ class App extends Component {
     this.inputTrainController = new InputTrainController(this);
 
     this.trainData = setInterval(() => {
-      
+
       getTrainDataHistory().then(res => {
         const data = util.getArrayData(res)
         this.setState({ trainData: data });
@@ -63,7 +61,7 @@ class App extends Component {
 
 
   render() {
-    const {pinAState, pinBState, pinCState} = this.state;
+    const { pinAState, pinBState, pinCState } = this.state;
     return (
       <div className="root">
         <Header />

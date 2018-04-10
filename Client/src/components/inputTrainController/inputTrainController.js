@@ -1,4 +1,6 @@
 
+// This is only used to "fake" the working of the map on the left of the screen. For demo purposes. Kept for expirements
+
 export class InputTrainController {
     app;
     constructor(app) {
@@ -9,30 +11,30 @@ export class InputTrainController {
             e = e || window.event;
             let station = "A";
             console.log(e);
-            switch(e.key) {
+            switch (e.key) {
                 case "a":
                     station = "A"
-                break;
+                    break;
                 case "b":
                     station = "B"
-                break;
+                    break;
                 case "c":
                     station = "C"
-                break;
+                    break;
                 case "q":
-                station = "AB";
-                break;
+                    station = "AB";
+                    break;
                 case "g":
-                station = "BC";
-                break;
+                    station = "BC";
+                    break;
                 case "d":
-                station = "CA";
-                break;
+                    station = "CA";
+                    break;
                 case "0":
-                station = "none";
-                break;
+                    station = "none";
+                    break;
                 default:
-                return;
+                    return;
             }
 
             app.state.pinAState = station === "A" ? 'active' : 'inactive';
